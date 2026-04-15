@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>창이 e-바우처 안내 | 2025 허벌라이프 프리미어 리그 특별 리워드</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f7f8fa;font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:#1a1a2e;min-height:100vh}
+  .container{max-width:480px;margin:0 auto;padding:0 0 40px;background:#fff;box-shadow:0 0 24px rgba(0,0,0,0.07)}
+
+  .header{background:#fff;padding:32px 24px 24px;text-align:center;border-bottom:2px solid #1D6F6A}
+  .eyebrow{font-size:11px;color:#1D6F6A;letter-spacing:2px;font-weight:700;margin-bottom:10px}
+  .main-title{font-size:20px;font-weight:900;color:#1a1a2e;line-height:1.35;margin-bottom:4px}
+  .main-title span{color:#1D6F6A}
+
+  .reward-box{margin:24px 20px 0;background:#f0faf9;border:2px solid #1D6F6A;border-radius:16px;padding:24px 20px;text-align:center}
+  .reward-label{font-size:11px;color:#1D6F6A;letter-spacing:2px;font-weight:700;margin-bottom:10px}
+  .reward-card-name{font-size:16px;font-weight:700;color:#1a1a2e;margin-bottom:14px}
+  .reward-amount{font-size:44px;font-weight:900;color:#1D6F6A;line-height:1;letter-spacing:-1px}
+  .reward-amount-sub{font-size:13px;color:#888;margin-top:4px}
+  .reward-tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#fff;color:#1D6F6A;font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;border:1.5px solid #1D6F6A}
+  .validity{font-size:12px;color:#888;margin-top:14px;padding-top:12px;border-top:1px solid #c8e6e4}
+
+  .section{margin:16px 20px 0;border:1px solid #e8eaf0;border-radius:14px;padding:20px}
+  .sec-header{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #e8eaf0}
+  .sec-num{width:24px;height:24px;background:#1D6F6A;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0}
+  .sec-title{font-size:14px;color:#1a1a2e;font-weight:700}
+
+  .target-text{font-size:14px;color:#444;line-height:1.9}
+  .target-period{display:inline-block;background:#f0faf9;color:#1D6F6A;font-size:13px;font-weight:700;padding:4px 12px;border-radius:6px;border:1px solid #c8e6e4;margin-bottom:6px}
+
+  .steps{display:flex;flex-direction:column;gap:12px}
+  .step{display:flex;align-items:flex-start;gap:12px}
+  .step-num{width:26px;height:26px;background:#1D6F6A;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0;margin-top:2px}
+  .step-body strong{display:block;font-size:14px;color:#1a1a2e;margin-bottom:2px;font-weight:700}
+  .step-body span{font-size:12px;color:#888}
+  .period-badge{display:inline-block;background:#f0faf9;color:#1D6F6A;font-size:12px;font-weight:700;padding:5px 12px;border-radius:6px;border:1px solid #c8e6e4;margin-bottom:14px}
+  .warn-box{background:#fffbf0;border:1px solid #f0d080;border-radius:8px;padding:10px 14px;margin-top:14px;display:flex;align-items:center;gap:8px}
+  .warn-dot{width:6px;height:6px;background:#e0a000;border-radius:50%;flex-shrink:0}
+  .warn-text{font-size:12px;color:#7a6000;font-weight:600}
+
+  .how-row{display:flex;align-items:flex-start;gap:4px}
+  .how-step{flex:1;text-align:center}
+  .how-num{width:30px;height:30px;background:#1D6F6A;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff;margin:0 auto 8px}
+  .how-label{font-size:11px;color:#555;line-height:1.6}
+  .how-label strong{display:block;color:#1a1a2e;font-size:12px;margin-bottom:2px;font-weight:700}
+  .how-arrow{color:#ccc;font-size:22px;margin-top:13px;flex-shrink:0}
+  .how-example{margin-top:14px;background:#f7f8fa;border-radius:8px;padding:10px 14px;text-align:center}
+  .how-example-text{font-size:12px;color:#666;line-height:1.8}
+  .how-example-text strong{color:#1D6F6A;font-weight:700}
+
+  .usage-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .usage-col-title{font-size:12px;font-weight:700;padding:6px 10px;border-radius:6px;margin-bottom:10px;text-align:center}
+  .ok-title{background:#f0faf9;color:#1D6F6A;border:1px solid #c8e6e4}
+  .no-title{background:#fff5f5;color:#c0392b;border:1px solid #f5c6c6}
+  .usage-item{display:flex;align-items:flex-start;gap:6px;margin-bottom:7px}
+  .dot-ok{width:5px;height:5px;border-radius:50%;background:#1D6F6A;margin-top:5px;flex-shrink:0}
+  .dot-no{width:5px;height:5px;border-radius:50%;background:#c0392b;margin-top:5px;flex-shrink:0}
+  .usage-text{font-size:11px;color:#444;line-height:1.5}
+
+  .notice{margin:16px 20px 0;background:#f7f8fa;border-radius:10px;padding:14px 18px}
+  .notice-text{font-size:11px;color:#888;line-height:1.9}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="eyebrow">2026 아시아 태평양 엑스트라베간자</div>
+    <div class="main-title">2025 허벌라이프 프리미어 리그<br><span>자격취득자를 위한 특별 리워드 안내</span></div>
+  </div>
+
+  <div class="reward-box">
+    <div class="reward-label">스페셜 어워드</div>
+    <div class="reward-card-name">창이 e-바우처 플렉시(Flexi) 카드</div>
+    <div class="reward-amount">SGD 190</div>
+    <div class="reward-amount-sub">싱가포르 달러 190 상당</div>
+    <div class="reward-tags">
+      <span class="tag">디스트리뷰터쉽당 1매</span>
+      <span class="tag">티켓 수량 무관</span>
+      <span class="tag">앱 설치 불필요</span>
+    </div>
+    <div class="validity">유효기간: 2027년 6월 15일까지</div>
+  </div>
+
+  <div class="section">
+    <div class="sec-header">
+      <div class="sec-num">1</div>
+      <div class="sec-title">대상</div>
+    </div>
+    <div class="target-text">
+      <div class="target-period">2025년 4월 ~ 2026년 1월</div><br>
+      위 기간 내 <strong>2025 허벌라이프 프리미어 리그 자격을 취득</strong>하신 분 중<br>
+      <strong>2026 아시아 태평양 엑스트라베간자에 참석</strong>하시는 분께 제공됩니다.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-header">
+      <div class="sec-num">2</div>
+      <div class="sec-title">수령 방법</div>
+    </div>
+    <div class="period-badge">운영기간: 2026년 6월 18일(목) ~ 21일(일)</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>엑스트라베간자 등록 부스에서 현장 등록 완료</strong>
+          <span>현장 등록 후 카드 수령 가능</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>기프트카드 수령 카운터 방문</strong>
+          <span>행사장 내 전용 카운터 운영</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>본인 신분 확인</strong>
+          <span>여권 또는 주민등록증 + 허벌라이프 회원번호 제시</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <strong>수령 확인서 서명 후 카드 수령</strong>
+        </div>
+      </div>
+    </div>
+    <div class="warn-box">
+      <div class="warn-dot"></div>
+      <div class="warn-text">본인만 직접 수령 가능 &nbsp;|&nbsp; 대리 수령 불가</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-header">
+      <div class="sec-num">3</div>
+      <div class="sec-title">사용 방법</div>
+    </div>
+    <div class="how-row">
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <div class="how-label"><strong>카드 제시</strong>매장 계산대에서 카드 제시</div>
+      </div>
+      <div class="how-arrow">›</div>
+      <div class="how-step">
+        <div class="how-num">2</div>
+        <div class="how-label"><strong>금액 안내</strong>5달러 단위로 사용 금액 안내</div>
+      </div>
+      <div class="how-arrow">›</div>
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <div class="how-label"><strong>결제 완료</strong>직원이 카드 뒷면 코드 스캔 후 결제</div>
+      </div>
+    </div>
+    <div class="how-example">
+      <div class="how-example-text">
+        예) 싱가포르 달러 28불 결제 시<br>
+        <strong>바우처 싱가포르 달러 25불 적용</strong> + 개인 결제 싱가포르 달러 3불
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-header">
+      <div class="sec-num">4</div>
+      <div class="sec-title">사용 가능 장소</div>
+    </div>
+    <div class="usage-grid">
+      <div>
+        <div class="usage-col-title ok-title">✓ 사용 가능</div>
+        <div class="usage-item"><div class="dot-ok"></div><div class="usage-text">창이 공항 터미널 1~4 식음료·리테일 매장</div></div>
+        <div class="usage-item"><div class="dot-ok"></div><div class="usage-text">주얼 창이 참여 매장</div></div>
+        <div class="usage-item"><div class="dot-ok"></div><div class="usage-text">스타벅스 · 스시로</div></div>
+        <div class="usage-item"><div class="dot-ok"></div><div class="usage-text">유니클로 · 미니소</div></div>
+        <div class="usage-item"><div class="dot-ok"></div><div class="usage-text">팝마트 · 디제이아이 등</div></div>
+      </div>
+      <div>
+        <div class="usage-col-title no-title">✗ 사용 불가</div>
+        <div class="usage-item"><div class="dot-no"></div><div class="usage-text">담배류 전 매장</div></div>
+        <div class="usage-item"><div class="dot-no"></div><div class="usage-text">맥도날드 · 세븐일레븐</div></div>
+        <div class="usage-item"><div class="dot-no"></div><div class="usage-text">에르메스 · 디올</div></div>
+        <div class="usage-item"><div class="dot-no"></div><div class="usage-text">환전소 · 은행</div></div>
+        <div class="usage-item"><div class="dot-no"></div><div class="usage-text">애플 스토어</div></div>
+        <div class="usage-item"><div class="dot-no"></div><div class="usage-text">온라인 구매</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notice">
+    <div class="notice-text">
+      ※ 참여 매장은 사전 고지 없이 변경될 수 있습니다.<br>
+      ※ 코드 오류 등 기술적 문제 발생 시 현장에서 즉각적으로 해결이 어려울 수 있습니다.<br>
+      ※ 리워드와 관련된 세금은 본인 부담입니다.
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
